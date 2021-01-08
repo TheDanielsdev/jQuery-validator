@@ -1,9 +1,4 @@
 $(function () {
-    /*this area is for the display of an error when users keeps typing spaces*/
-    $.validator.addMethod("noSpace", function (value, element) {
-        return value == '' || value.trim().length != 0
-    }, "spaces are not allowed")
-
     $("#register").validate({
         rules: {
             email: {
@@ -30,6 +25,11 @@ $(function () {
 
     })
 })
+/*this area is for the display of an error when users keeps typing spaces*/
+$.validator.addMethod("noSpace", function (value, element) {
+    return value == '' || value.trim().length != 0
+}, "spaces are not allowed")
+
 
 
 
@@ -51,6 +51,7 @@ $(function () {
                     required: 'please enter email!'
                 }
             }
+
         })
     }
 })*/
